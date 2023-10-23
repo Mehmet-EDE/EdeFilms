@@ -36,7 +36,7 @@ function FeaturedMovies({ movie = {
             <h1 className='text-9xl uppercase tracking-wide font-bold leading-[72px] max-w-[25ch] '>{title}</h1>
             <p className={`text-xl max-w-[50ch]   ${isCompact ? 'truncate' : ''} `} >{overview}</p>
             <div className="flex gap-2">
-                <Link className="flex items-center justify-center bg-gray-300 text-gray-700 w-64 h-12 rounded-full text-2xl font-semibold" href={`/movie/${movie.id}`}>
+                <Link className="flex items-center justify-center bg-gray-200 text-gray-700 w-64 h-12 rounded-full text-2xl font-semibold" href={`/movie/${movie.id}`}>
                     Play
                 </Link>
                 <button className="flex items-center justify-center border-2  border-gray-300 rounded-full  text-gray-300">

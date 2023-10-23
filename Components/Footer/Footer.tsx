@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="flex items-center justify-center bottom-0 static">
       Made with 🚀 by&nbsp;
-      <Link className='underline' href="https://www.linkedin.com/in/mehmet-ede-20984316a/" target="_blank">
+      <Link className='underline' href="https://www.linkedin.com/in/mehmet-ede-20984316a" >
         Mehmet EDE
       </Link>
     </footer>
