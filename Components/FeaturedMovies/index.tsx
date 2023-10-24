@@ -33,7 +33,7 @@ function FeaturedMovies({ movie = {
     const { poster_path, title, overview } = movie;
     return (
         <div className='flex flex-col gap-6 mt-14 mb-14  '>
-            <h1 className='text-9xl uppercase tracking-wide font-bold leading-[72px] max-w-[25ch] '>{title}</h1>
+            <h1 className='text-8xl uppercase tracking-wide font-bold leading-[72px] max-w-screen-lg '>{title}</h1>
             <p className={`text-xl max-w-[50ch]   ${isCompact ? 'truncate' : ''} `} >{overview}</p>
             <div className="flex gap-2">
                 <Link className="flex items-center justify-center bg-gray-200 text-gray-700 w-64 h-12 rounded-full text-2xl font-semibold" href={`/movie/${movie.id}`}>
