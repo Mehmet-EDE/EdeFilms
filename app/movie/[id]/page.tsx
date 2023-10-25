@@ -7,7 +7,7 @@ interface props {
     id: string
   }
   searchParams: {
-    error: boolean
+    error: string
   }
 }
 function pages({ params, searchParams }: props) {
@@ -15,8 +15,9 @@ function pages({ params, searchParams }: props) {
   if (selectedMovie === undefined) {
     return notFound();
   }
-  if (searchParams.error === true) {
-    throw new Error
+  console.log(searchParams)
+  if (searchParams.error == "true") {
+    throw new Error()
   }
   return (
     <Movie movie={selectedMovie} />
