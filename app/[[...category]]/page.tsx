@@ -23,7 +23,12 @@ interface Movie {
   vote_average: number;
   vote_count: number;
 }
-export default function Home({ params }: pageProps) {
+async function delay(ms: number) {
+  return new Promise<void>((resolve) => setTimeout(() => resolve, ms))
+}
+
+export default async function Home({ params }: pageProps) {
+  await delay(2000)
   var selectedCategory, movieArr: Movie[] = [];
   if (params.category && params.category.length > 0) {
     selectedCategory = true

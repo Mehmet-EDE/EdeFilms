@@ -33,5 +33,5 @@ function Categories({ category }: CategoryProps) {
 }
 
 
-
+export { CategoriesLoading } from "./loading";
 export default Categories;
