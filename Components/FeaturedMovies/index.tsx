@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { FaPlus } from 'react-icons/fa'
+import { AiOutlinePlayCircle } from 'react-icons/ai'
 interface MovieData {
     adult?: boolean;
     backdrop_path?: string;
@@ -13,7 +14,7 @@ interface MovieData {
     popularity?: number;
     poster_path?: string;
     release_date?: string;
-    title: string; 
+    title: string;
     video?: boolean;
     vote_average?: number;
     vote_count?: number;
@@ -29,14 +30,15 @@ function FeaturedMovies({ movie = {
     poster_path: "",
     title: "",
     overview: "",
-}, isCompact}: moviesprops) {
+}, isCompact }: moviesprops) {
     const { poster_path, title, overview } = movie;
     return (
         <div className='flex flex-col gap-6 mt-14 mb-14  '>
-            <h1 className='text-8xl uppercase tracking-wide font-bold leading-[72px] max-w-screen-lg '>{title}</h1>
+            <h1 className='text-8xl uppercase tracking-wide font-bold leading-[72px] max-w-screen-lg rsm:text-6xl '>{title}</h1>
             <p className={`text-xl max-w-[50ch]   ${isCompact ? 'truncate' : ''} `} >{overview}</p>
-            <div className="flex gap-2">
-                <Link className="flex items-center justify-center bg-gray-200 text-gray-700 w-64 h-12 rounded-full text-2xl font-semibold" href={`/movie/${movie.id}`}>
+            <div className="flex gap-2 ">
+                <Link className="flex items-center justify-center bg-gray-200 text-gray-700 w-64 h-12 rounded-full text-3xl font-semibold m-5  hover:text-white hover:shadow-[inset_18rem_0_0_0] hover:shadow-slate-600 duration-[400ms,700ms] transition-[color,box-shadow] " href={`/movie/${movie.id}`}>
+                <AiOutlinePlayCircle />
                     Play
                 </Link>
                 <button className="flex items-center justify-center border-2  border-gray-300 rounded-full  text-gray-300">

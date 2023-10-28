@@ -10,10 +10,10 @@ function DropdownMenu({ categories }: DropdownMenuProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='relative group'>
+        <div className='relative'>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className='flex items-center p-4 justify-center bg-opacity-75 bg-black border border-gray-700 shadow-md rounded-md font-semibold'
+                className='flex items-center p-4 justify-center bg-opacity-75 bg-black border border-gray-700 shadow-md rounded-md font-semibold hover:z-9 hover:scale-90 transition-transform duration-300'
             >
                 More Categories
             </button>
@@ -24,7 +24,6 @@ function DropdownMenu({ categories }: DropdownMenuProps) {
                             <a key={cat.id} href={`/${cat.id}`} className='block px-4 py-2 text-gray-800 hover:bg-gray-200'>{cat.name}</a>
                             <hr />
                         </div>
-
                     ))}
                 </div>
             )}

@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr" className={inter.className}>
-      <body className={`containers `}>
+      <body className={`containers rsm:overflow-x-hidden`}>
         <Header />
         <main>
           {children}
