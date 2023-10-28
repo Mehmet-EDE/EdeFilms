@@ -25,7 +25,7 @@ export default function Error({
                     </div>
                     <h1 className="mt-5 text-[36px] font-bold text-white lg:text-[50px]">500 - Server error</h1>
                     <p className="text-white mt-5 lg:text-lg">Oops Looks Like You Found A <b>Bug</b> .</p>
-                    <a href='/' className="text-white mt-5 lg:text-lg font-extrabold hover:underline "> Let's Go Home</a>
+                    <a href='/' className="text-white mt-5 lg:text-lg font-extrabold hover:underline "> {`Let's Go Home`}</a>
                 </div>
             </div>
         </div>
