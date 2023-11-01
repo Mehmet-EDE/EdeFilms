@@ -24,11 +24,11 @@ interface MoviesSectionProps {
 }
 function MoviesSection({ title, movies }: MoviesSectionProps) {
     return (
-        <div className="mt-10">
-            <h3 className="mb-3 uppercase text-2xl tracking-tighter">{title}</h3>
-            <div className="flex justify-start items-center flex-wrap m-5">
+        <div className="mt-10 ">
+            <h3 className="mb-3 uppercase text-2xl tracking-tighter  rsm:text-center">{title}</h3>
+            <div className="flex justify-start items-center flex-wrap m-5 rsm:items-center rsm:justify-center">
                 {movies.map((movie) => (
-                    <div className=" rounded-lg m-5 relative h-fit w-fit shadow-md transition-transform duration-300 ease-linear overflow-hidden hover:z-9 hover:scale-125" key={movie.id}>
+                    <div className=" rounded-lg m-5 relative h-fit w-fit shadow-md transition-transform duration-300 ease-linear overflow-hidden hover:z-9 hover:scale-125 " key={movie.id}>
                         <Link href={`/movie/${movie.id}`}>
                             <Image
                                 width={150}
